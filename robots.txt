@@ -30,4 +30,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://alice51849.github.io/astrea-support/sitemap.xml
+Sitemap: https://alice51849.github.io/zodira-support/sitemap.xml

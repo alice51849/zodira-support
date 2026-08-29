@@ -1,89 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US" data-page="privacy">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Zodira Privacy Policy</title>
-  <meta name="description" content="Zodira keeps decision-journal and optional profile data on your device, uses StoreKit for purchases, and has no ads, tracking, analytics or AI upload.">
+  <title data-i18n="titlePrivacy">Zodira Privacy</title>
+  <meta name="description" content="Zodira keeps decision-journal and optional profile data local, with no ads, tracking, analytics or AI upload." data-i18n-content="noCollection">
   <meta name="theme-color" content="#090716">
-  <link rel="canonical" href="https://alice51849.github.io/astrea-support/privacy.html">
+  <link rel="canonical" href="https://alice51849.github.io/zodira-support/privacy.html">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="locales.js"></script>
+  <script defer src="localize.js"></script>
 </head>
 <body>
   <div class="shell">
     <header class="site-header">
-      <a class="brand" href="index.html">Zodira</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Support</a>
-        <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="terms.html">Terms</a>
+      <a class="brand" href="index.html" data-localized-link>Zodira</a>
+      <nav class="nav" aria-label="Privacy navigation">
+        <a href="index.html" data-localized-link data-i18n="support">Support</a>
+        <a href="privacy.html" aria-current="page" data-localized-link data-i18n="privacy">Privacy</a>
+        <label class="locale-picker">
+          <span aria-hidden="true">🌐</span>
+          <select id="locale-select" aria-label="Language"></select>
+        </label>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Privacy policy</p>
-        <h1>Your journal stays with you</h1>
-        <p class="lead">Effective August 15, 2026</p>
+        <p class="eyebrow" data-i18n="privacy">Privacy</p>
+        <h1 data-i18n="name">Zodira: Decision Journal</h1>
+        <p class="lead localized-copy" data-i18n="description">Zodira is a private offline decision journal. Your journal and optional profile stay on your device.</p>
+        <p class="updated"><time datetime="2026-08-29">2026-08-29</time></p>
       </section>
 
       <article class="policy">
-        <p class="notice"><strong>Summary:</strong> Zodira is a private offline decision journal. We do not collect your journal or profile, do not require an account, and do not use ads, tracking, analytics or any AI service that receives your data.</p>
+        <p class="notice" data-i18n="noCollection">Zodira has no account, ads, tracking, product analytics, developer-operated server or AI upload. We do not collect or receive your journal or optional profile.</p>
 
-        <h2>1. App and scope</h2>
-        <p>This policy applies to Zodira for iOS and watchOS, bundle identifier <strong>com.alice51849.Astrea</strong>. The legacy public path in this page’s URL remains stable so existing App Store and in-app links continue to work.</p>
+        <h2 data-i18n="name">Zodira: Decision Journal</h2>
+        <p>Zodira · iOS · watchOS</p>
+        <p class="bundle-identifier"><strong>Bundle ID:</strong> <code>com.alice51849.Astrea</code></p>
 
-        <h2>2. Data we collect</h2>
-        <p><strong>We do not collect or receive your personal data through the app.</strong> Zodira has no account system and no developer-operated backend. We do not sell, rent or share app data because the app does not send that data to us.</p>
+        <h2 data-i18n="privacy">Privacy</h2>
+        <p data-i18n="local">Private and offline; journal and optional profile data stay on this device.</p>
+        <p data-i18n="noCollection">Zodira has no account, ads, tracking, product analytics, developer-operated server or AI upload. We do not collect or receive your journal or optional profile.</p>
 
-        <h2>3. Decision-journal data stored locally</h2>
-        <p>When you create a journal record, the app may store the information you enter: your question, context, options, working choice, priority, supporting evidence, counterpoint, next step, revisit date, check-in feeling and clarity, optional symbolic prompt, outcome, actual result and learning. Timestamps and local record identifiers are also stored so the journal can sort and revisit entries.</p>
-        <p>This information is written to the app’s local container on your device. The journal file uses iOS complete file protection. It is not uploaded to us.</p>
+        <h2>◇</h2>
+        <p data-i18n="lens">A metaphor to question assumptions, not a forecast or instruction.</p>
 
-        <h2>4. Optional profile data stored locally</h2>
-        <p>If you choose to create the optional symbolic profile, the app may store a name, birth date and time, whether the time is exact, place label, latitude, longitude, time-zone offset and sex setting. The profile is used only on your device after you actively choose a compatible optional lens inside a journal. The core decision journal does not require this profile.</p>
+        <h2>StoreKit · Apple</h2>
+        <p><span data-i18n="purchase">One-time unlock, yours forever</span> · <span data-i18n="noSubscription">No subscription</span></p>
+        <p data-i18n="restoreHelp">On the unlock screen, choose Restore Purchases while signed in to the Apple Account that made the purchase.</p>
 
-        <h2>5. Settings and paired Apple Watch</h2>
-        <p>Interface language, theme and onboarding state are stored locally as app settings. Purchase entitlement is checked through StoreKit. If you use the paired Watch app, Zodira may pass locally generated display content between your iPhone and Apple Watch using Apple’s WatchConnectivity service. This device-to-device content is not sent to us.</p>
-
-        <h2>6. No ads, tracking, analytics or AI upload</h2>
-        <ul>
-          <li>No advertising SDK or advertising identifier is used.</li>
-          <li>No cross-app or cross-site tracking is performed.</li>
-          <li>No product analytics, third-party analytics or developer-operated crash analytics is included.</li>
-          <li>No journal, profile, prompt or result is uploaded to an AI model or external inference service.</li>
-          <li>No remote profile, cloud journal or developer server is used.</li>
-        </ul>
-
-        <h2>7. StoreKit purchases</h2>
-        <p>Zodira offers an optional one-time unlock. Product loading, purchase, verification and restore are handled by Apple through StoreKit and the App Store. Apple may process your Apple Account, transaction and payment information under Apple’s own policies. We do not receive your payment-card details. The app receives only the StoreKit information needed to show the localized product and determine whether access is unlocked.</p>
-
-        <h2>8. External links and support email</h2>
-        <p>When you choose Privacy, Terms, Rate Zodira or Support, iOS may open an Apple service, this public website or your email app. Zodira does not silently send journal or profile content with those actions. If you email support, we receive only the information and attachments you intentionally send; email delivery is then governed by your mail provider and Google’s Gmail service.</p>
-
-        <h2>9. Backups, deletion and retention</h2>
-        <p>Local app data may be included in device backups depending on your iOS and iCloud backup settings. Those backups are controlled by you and Apple. You can delete individual journal records or all local decision history inside Zodira. Deleting the app removes its local container from the device, while an existing Apple-managed backup may remain until you manage or expire that backup.</p>
-        <p>Because Zodira does not receive your journal or profile, we have no server copy to access, export, correct or delete.</p>
-
-        <h2>10. Children</h2>
-        <p>Zodira is a general-audience productivity app. It does not knowingly collect personal information from children or anyone else because it does not collect app data.</p>
-
-        <h2>11. Changes to this policy</h2>
-        <p>If Zodira’s data practices change, this page will be updated before the affected version is released and the effective date above will change.</p>
-
-        <h2>12. Contact</h2>
-        <p>For privacy questions, email <a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Privacy">hourstag.app@gmail.com</a>.</p>
+        <h2 data-i18n="delete">Delete all data</h2>
+        <p data-i18n="deletion">Delete one decision or all local data in the app. Deleting Zodira removes its local container; Apple-managed backups remain governed by your device settings.</p>
+        <h2 data-i18n="support">Support</h2>
+        <h2 data-i18n="support">Support</h2>
+        <p><a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Privacy">hourstag.app@gmail.com</a></p>
       </article>
     </main>
 
-    <!-- ls-family:start --><section aria-label="More apps from the same developer" style="max-width:1060px;margin:34px auto 26px;padding:20px 22px;background:rgba(127,127,127,.08);background:color-mix(in srgb, currentColor 7%, transparent);border:1px solid rgba(127,127,127,.18);border-color:color-mix(in srgb, currentColor 16%, transparent);border-radius:20px;font-family:inherit;color:inherit;text-align:left"><h2 style="margin:0 0 14px;font-size:17px;color:inherit">More apps from the same developer</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px"><a href="https://apps.apple.com/app/id6785004775?pt=118326163&amp;ct=sup_astrea&amp;mt=8" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(127,127,127,.10);background:color-mix(in srgb, currentColor 9%, transparent);border:1px solid rgba(127,127,127,.22);border-color:color-mix(in srgb, currentColor 20%, transparent);border-radius:16px;text-decoration:none;color:inherit;min-width:0;text-align:left"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="" width="46" height="46" loading="lazy" style="border-radius:11px;flex:0 0 auto" /><span style="min-width:0"><strong style="display:block;font-size:14px;line-height:1.35">Mochi: Cute Checklist</strong><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">Free · one-time purchase to unlock, no subscription</span><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">View on the App Store</span></span></a><a href="https://apps.apple.com/app/id6794725568?pt=118326163&amp;ct=sup_astrea&amp;mt=8" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(127,127,127,.10);background:color-mix(in srgb, currentColor 9%, transparent);border:1px solid rgba(127,127,127,.22);border-color:color-mix(in srgb, currentColor 20%, transparent);border-radius:16px;text-decoration:none;color:inherit;min-width:0;text-align:left"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/4a/d1/ab4ad140-555a-d151-0376-15e7f0c6dd47/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="" width="46" height="46" loading="lazy" style="border-radius:11px;flex:0 0 auto" /><span style="min-width:0"><strong style="display:block;font-size:14px;line-height:1.35">DailyMate Lite: Speak Today</strong><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">Free · one-time purchase to unlock, no subscription</span><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">View on the App Store</span></span></a><a href="https://apps.apple.com/app/id6782251621?pt=118326163&amp;ct=sup_astrea&amp;mt=8" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(127,127,127,.10);background:color-mix(in srgb, currentColor 9%, transparent);border:1px solid rgba(127,127,127,.22);border-color:color-mix(in srgb, currentColor 20%, transparent);border-radius:16px;text-decoration:none;color:inherit;min-width:0;text-align:left"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="" width="46" height="46" loading="lazy" style="border-radius:11px;flex:0 0 auto" /><span style="min-width:0"><strong style="display:block;font-size:14px;line-height:1.35">Cyca: Period &amp; Cycle Tracker</strong><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">Free · one-time purchase to unlock, no subscription</span><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">View on the App Store</span></span></a><a href="https://apps.apple.com/app/id6788236641?pt=118326163&amp;ct=sup_astrea&amp;mt=8" rel="noopener" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:rgba(127,127,127,.10);background:color-mix(in srgb, currentColor 9%, transparent);border:1px solid rgba(127,127,127,.22);border-color:color-mix(in srgb, currentColor 20%, transparent);border-radius:16px;text-decoration:none;color:inherit;min-width:0;text-align:left"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="" width="46" height="46" loading="lazy" style="border-radius:11px;flex:0 0 auto" /><span style="min-width:0"><strong style="display:block;font-size:14px;line-height:1.35">Sereno: Sleep Sounds</strong><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">Free · one-time purchase to unlock, no subscription</span><span style="display:block;font-size:12px;line-height:1.4;opacity:.72">View on the App Store</span></span></a></div><p style="margin:10px 0 0;font-size:12px;opacity:.66">Links open the App Store.</p><p style="margin:6px 0 0;font-size:12px;opacity:.66"><a href="https://alice51849.github.io/ios-app-guide/?utm_source=support_site&amp;utm_medium=family_module&amp;utm_campaign=sup_astrea" rel="noopener" style="color:inherit;text-decoration:underline">More app guides &amp; how-tos</a></p></section><!-- ls-family:end -->
-<footer class="site-footer">
+    <footer class="site-footer">
       <span>© 2026 Lumi Studio · Zodira</span>
       <div class="footer-links">
-        <a href="index.html">Support</a>
-        <a href="terms.html">Terms</a>
-        <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>
-        <a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Privacy">Email privacy support</a>
+        <a href="index.html" data-localized-link data-i18n="support">Support</a>
+        <a href="terms.html" data-localized-link>Zodira EULA</a>
+        <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>
+        <a href="https://alice51849.github.io/ios-app-guide/?utm_source=support_site&amp;utm_medium=family_module&amp;utm_campaign=sup_zodira" rel="noopener">Lumi Studio</a>
+        <a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Privacy">hourstag.app@gmail.com</a>
       </div>
     </footer>
   </div>
