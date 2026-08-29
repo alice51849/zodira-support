@@ -72,6 +72,12 @@
     anchor.href = localized.href;
   }
 
+  for (const anchor of document.querySelectorAll("a[data-surface]")) {
+    const file = anchor.dataset.surface;
+    if (!file) continue;
+    anchor.href = `${locale}/${file}`;
+  }
+
   if (requested === locale) {
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {

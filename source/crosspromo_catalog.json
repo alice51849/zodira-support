@@ -1,0 +1,1398 @@
+{
+ "apps": [
+  {
+   "app_store_id": "6788236641",
+   "canonical_app_store_url": "https://apps.apple.com/app/id6788236641",
+   "default_name": "Sereno",
+   "key": "sereno",
+   "purchase_model": "free_with_lifetime_unlock",
+   "storefronts": {
+    "au": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep Sounds",
+     "price": 0.0
+    },
+    "br": {
+     "formatted_price": "Grátis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sons para Dormir",
+     "price": 0.0
+    },
+    "ca": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Focus",
+     "price": 0.0
+    },
+    "cn": {
+     "formatted_price": "免费",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: 睡眠之声",
+     "price": 0.0
+    },
+    "cz": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "de": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Schlafklänge",
+     "price": 0.0
+    },
+    "dk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "es": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sonidos para Dormir",
+     "price": 0.0
+    },
+    "fi": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "fr": {
+     "formatted_price": "Gratuit",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sons de Sommeil",
+     "price": 0.0
+    },
+    "gb": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "gr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "hr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "hu": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "id": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "il": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "in": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "it": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Suoni per Dormire",
+     "price": 0.0
+    },
+    "jp": {
+     "formatted_price": "無料",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: スリープサウンド",
+     "price": 0.0
+    },
+    "kr": {
+     "formatted_price": "무료",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: 수면 사운드",
+     "price": 0.0
+    },
+    "mx": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sonidos para Dormir",
+     "price": 0.0
+    },
+    "my": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "nl": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Slaapgeluiden",
+     "price": 0.0
+    },
+    "no": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "pk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "pl": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "pt": {
+     "formatted_price": "Gratuito",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sons para Dormir",
+     "price": 0.0
+    },
+    "ro": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "ru": {
+     "formatted_price": "Бесплатно",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Звуки для сна",
+     "price": 0.0
+    },
+    "sa": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "se": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sömnljud",
+     "price": 0.0
+    },
+    "si": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "sk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "th": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "tr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "tw": {
+     "formatted_price": "免費",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: 極致睡眠音效",
+     "price": 0.0
+    },
+    "ua": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    },
+    "us": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep Sounds",
+     "price": 0.0
+    },
+    "vn": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/69/a5/6169a534-a162-db6a-7e1a-c1946e43ea26/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Sereno: Sleep & Relax",
+     "price": 0.0
+    }
+   },
+   "unlock_iap_verified": true
+  },
+  {
+   "app_store_id": "6782251621",
+   "canonical_app_store_url": "https://apps.apple.com/app/id6782251621",
+   "default_name": "Cyca",
+   "key": "cyca",
+   "purchase_model": "free_with_lifetime_unlock",
+   "storefronts": {
+    "au": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "br": {
+     "formatted_price": "Grátis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Calendário Menstrual",
+     "price": 0.0
+    },
+    "ca": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "cn": {
+     "formatted_price": "免费",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca 经期周期追踪・排卵",
+     "price": 0.0
+    },
+    "cz": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "de": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Perioden Tracker",
+     "price": 0.0
+    },
+    "dk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "es": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Calendario Menstrual",
+     "price": 0.0
+    },
+    "fi": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "fr": {
+     "formatted_price": "Gratuit",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca : Suivi de Règles",
+     "price": 0.0
+    },
+    "gb": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "gr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "hr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "hu": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "id": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "il": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "in": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "it": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Ciclo Mestruale",
+     "price": 0.0
+    },
+    "jp": {
+     "formatted_price": "無料",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca 生理・排卵日トラッカー",
+     "price": 0.0
+    },
+    "kr": {
+     "formatted_price": "무료",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca 생리·배란일 트래커",
+     "price": 0.0
+    },
+    "mx": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Calendario Menstrual",
+     "price": 0.0
+    },
+    "my": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "nl": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Menstruatiekalender",
+     "price": 0.0
+    },
+    "no": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "pk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "pl": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "pt": {
+     "formatted_price": "Gratuito",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Calendário menstrual",
+     "price": 0.0
+    },
+    "ro": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "ru": {
+     "formatted_price": "Бесплатно",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: календарь цикла",
+     "price": 0.0
+    },
+    "sa": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "se": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Menskalender",
+     "price": 0.0
+    },
+    "si": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "sk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "th": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "tr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "tw": {
+     "formatted_price": "免費",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca 經期週期追蹤・排卵",
+     "price": 0.0
+    },
+    "ua": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "us": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    },
+    "vn": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/1e/55/b91e559c-49f3-3cf8-45e7-f8ae84df72b8/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Cyca: Period & Cycle Tracker",
+     "price": 0.0
+    }
+   },
+   "unlock_iap_verified": true
+  },
+  {
+   "app_store_id": "6790418321",
+   "canonical_app_store_url": "https://apps.apple.com/app/id6790418321",
+   "default_name": "DailyMate",
+   "key": "dailymate",
+   "purchase_model": "paid_upfront",
+   "storefronts": {
+    "au": {
+     "formatted_price": "$19.99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 19.99
+    },
+    "br": {
+     "formatted_price": "R$ 79,90",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: idiomas em contexto",
+     "price": 79.9
+    },
+    "ca": {
+     "formatted_price": "$14.99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Practical Phrases",
+     "price": 14.99
+    },
+    "cn": {
+     "formatted_price": "¥88.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate：用句子学语言",
+     "price": 88.0
+    },
+    "cz": {
+     "formatted_price": "299,00 Kč",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 299.0
+    },
+    "de": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Sprachen im Alltag",
+     "price": 12.99
+    },
+    "dk": {
+     "formatted_price": "99,00 kr",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 99.0
+    },
+    "es": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: idiomas en contexto",
+     "price": 12.99
+    },
+    "fi": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 12.99
+    },
+    "fr": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate : parler en contexte",
+     "price": 12.99
+    },
+    "gb": {
+     "formatted_price": "£11.99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 11.99
+    },
+    "gr": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 12.99
+    },
+    "hr": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 12.99
+    },
+    "hu": {
+     "formatted_price": "HUF4,990.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 4990.0
+    },
+    "id": {
+     "formatted_price": "Rp 199ribu",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 199000.0
+    },
+    "il": {
+     "formatted_price": "₪39.90",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 39.9
+    },
+    "in": {
+     "formatted_price": "₹ 1,199",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 1199.0
+    },
+    "it": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: lingue in contesto",
+     "price": 12.99
+    },
+    "jp": {
+     "formatted_price": "¥2,000",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate：文で身につく語学",
+     "price": 2000.0
+    },
+    "kr": {
+     "formatted_price": "￦19,000",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: 문장으로 배우는 언어",
+     "price": 19000.0
+    },
+    "mx": {
+     "formatted_price": "$249.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: habla en contexto",
+     "price": 249.0
+    },
+    "my": {
+     "formatted_price": "RM59.90",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 59.9
+    },
+    "nl": {
+     "formatted_price": "€ 12,99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: talen in context",
+     "price": 12.99
+    },
+    "no": {
+     "formatted_price": "149,00 kr",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 149.0
+    },
+    "pk": {
+     "formatted_price": "Rs 3,500.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 3500.0
+    },
+    "pl": {
+     "formatted_price": "49,99 zł",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 49.99
+    },
+    "pt": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: línguas em contexto",
+     "price": 12.99
+    },
+    "ro": {
+     "formatted_price": "69,99 lei",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 69.99
+    },
+    "ru": {
+     "formatted_price": "999,00 ₽",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Фразы для жизни",
+     "price": 999.0
+    },
+    "sa": {
+     "formatted_price": "SAR 49.99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 49.99
+    },
+    "se": {
+     "formatted_price": "149,00 kr",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Meningar för livet",
+     "price": 149.0
+    },
+    "si": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 12.99
+    },
+    "sk": {
+     "formatted_price": "12,99 €",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 12.99
+    },
+    "th": {
+     "formatted_price": "฿399.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 399.0
+    },
+    "tr": {
+     "formatted_price": "₺599,99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 599.99
+    },
+    "tw": {
+     "formatted_price": "$390.00",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate：用句子學語言",
+     "price": 390.0
+    },
+    "ua": {
+     "formatted_price": "14,99 USD",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 14.99
+    },
+    "us": {
+     "formatted_price": "$11.99",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Language Phrases",
+     "price": 11.99
+    },
+    "vn": {
+     "formatted_price": "399.000đ",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e4/33/42/e43342e4-56be-21ec-41d6-6212c31b3535/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "DailyMate: Everyday Phrases",
+     "price": 399000.0
+    }
+   },
+   "unlock_iap_verified": false
+  },
+  {
+   "app_store_id": "6785004775",
+   "canonical_app_store_url": "https://apps.apple.com/app/id6785004775",
+   "default_name": "Mochi",
+   "key": "mochi",
+   "purchase_model": "free_with_lifetime_unlock",
+   "storefronts": {
+    "au": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "br": {
+     "formatted_price": "Grátis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Lista fofa",
+     "price": 0.0
+    },
+    "ca": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "cn": {
+     "formatted_price": "免费",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: 可爱待办清单",
+     "price": 0.0
+    },
+    "cz": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "de": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Süße To-do-Liste",
+     "price": 0.0
+    },
+    "dk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "es": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Lista monísima",
+     "price": 0.0
+    },
+    "fi": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "fr": {
+     "formatted_price": "Gratuit",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Liste toute mignonne",
+     "price": 0.0
+    },
+    "gb": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "gr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "hr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "hu": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "id": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "il": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "in": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "it": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Lista carina",
+     "price": 0.0
+    },
+    "jp": {
+     "formatted_price": "無料",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: かわいいToDo",
+     "price": 0.0
+    },
+    "kr": {
+     "formatted_price": "무료",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: 귀여운 할 일 목록",
+     "price": 0.0
+    },
+    "mx": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Lista súper cute",
+     "price": 0.0
+    },
+    "my": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "nl": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Schattige taken",
+     "price": 0.0
+    },
+    "no": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "pk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "pl": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "pt": {
+     "formatted_price": "Gratuito",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Lista amorosa",
+     "price": 0.0
+    },
+    "ro": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "ru": {
+     "formatted_price": "Бесплатно",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Милый список дел",
+     "price": 0.0
+    },
+    "sa": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "se": {
+     "formatted_price": "Gratis",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Söt att-göra-lista",
+     "price": 0.0
+    },
+    "si": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "sk": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "th": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "tr": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "tw": {
+     "formatted_price": "免費",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: 可愛待辦清單",
+     "price": 0.0
+    },
+    "ua": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "us": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    },
+    "vn": {
+     "formatted_price": "Free",
+     "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/60/67/b76067fe-738a-e88b-e974-69c1c113c361/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+     "name": "Mochi: Cute Checklist",
+     "price": 0.0
+    }
+   },
+   "unlock_iap_verified": true
+  }
+ ],
+ "copy": {
+  "ar-SA": {
+   "cta": "عرض في App Store",
+   "guide": "المزيد من أدلة التطبيقات وشروحات الاستخدام",
+   "heading": "المزيد من تطبيقات المطوّر نفسه",
+   "iap": "عملية شراء واحدة لفتح كل الميزات، بدون اشتراك",
+   "note": "الروابط تفتح App Store."
+  },
+  "bn-BD": {
+   "cta": "App Store-এ দেখুন",
+   "guide": "আরও অ্যাপ গাইড ও টিউটোরিয়াল",
+   "heading": "একই ডেভেলপারের আরও অ্যাপ",
+   "iap": "আনলক করতে একবারের কেনাকাটা, কোনো সাবস্ক্রিপশন নেই",
+   "note": "লিঙ্কগুলি App Store খোলে।"
+  },
+  "ca": {
+   "cta": "Veure a l'App Store",
+   "guide": "Més guies i tutorials d'apps",
+   "heading": "Més apps del mateix desenvolupador",
+   "iap": "compra única per desbloquejar-ho tot, sense subscripció",
+   "note": "Els enllaços obren l'App Store."
+  },
+  "cs": {
+   "cta": "Zobrazit v App Storu",
+   "guide": "Další návody a tipy k aplikacím",
+   "heading": "Další aplikace od stejného vývojáře",
+   "iap": "jednorázový nákup pro odemknutí, žádné předplatné",
+   "note": "Odkazy otevřou App Store."
+  },
+  "da": {
+   "cta": "Se i App Store",
+   "guide": "Flere app-guider og vejledninger",
+   "heading": "Flere apps fra samme udvikler",
+   "iap": "engangskøb låser alt op, intet abonnement",
+   "note": "Links åbner App Store."
+  },
+  "de-DE": {
+   "cta": "Im App Store ansehen",
+   "guide": "Weitere App-Anleitungen und Tipps",
+   "heading": "Weitere Apps desselben Entwicklers",
+   "iap": "einmaliger Kauf zum Freischalten, kein Abo",
+   "note": "Die Links öffnen den App Store."
+  },
+  "el": {
+   "cta": "Προβολή στο App Store",
+   "guide": "Περισσότεροι οδηγοί και συμβουλές για εφαρμογές",
+   "heading": "Περισσότερες εφαρμογές από τον ίδιο προγραμματιστή",
+   "iap": "εφάπαξ αγορά για ξεκλείδωμα, χωρίς συνδρομή",
+   "note": "Οι σύνδεσμοι ανοίγουν το App Store."
+  },
+  "en-AU": {
+   "cta": "View on the App Store",
+   "guide": "More app guides & how-tos",
+   "heading": "More apps from the same developer",
+   "iap": "one-time purchase to unlock, no subscription",
+   "note": "Links open the App Store."
+  },
+  "en-CA": {
+   "cta": "View on the App Store",
+   "guide": "More app guides & how-tos",
+   "heading": "More apps from the same developer",
+   "iap": "one-time purchase to unlock, no subscription",
+   "note": "Links open the App Store."
+  },
+  "en-GB": {
+   "cta": "View on the App Store",
+   "guide": "More app guides & how-tos",
+   "heading": "More apps from the same developer",
+   "iap": "one-time purchase to unlock, no subscription",
+   "note": "Links open the App Store."
+  },
+  "en-US": {
+   "cta": "View on the App Store",
+   "guide": "More app guides & how-tos",
+   "heading": "More apps from the same developer",
+   "iap": "one-time purchase to unlock, no subscription",
+   "note": "Links open the App Store."
+  },
+  "es-ES": {
+   "cta": "Ver en el App Store",
+   "guide": "Más guías y tutoriales de apps",
+   "heading": "Más apps del mismo desarrollador",
+   "iap": "compra única para desbloquear, sin suscripción",
+   "note": "Los enlaces abren el App Store."
+  },
+  "es-MX": {
+   "cta": "Ver en el App Store",
+   "guide": "Más guías y tutoriales de apps",
+   "heading": "Más apps del mismo desarrollador",
+   "iap": "compra única para desbloquear, sin suscripción",
+   "note": "Los enlaces abren el App Store."
+  },
+  "fi": {
+   "cta": "Katso App Storessa",
+   "guide": "Lisää sovellusoppaita ja ohjeita",
+   "heading": "Lisää saman kehittäjän sovelluksia",
+   "iap": "kertaosto avaa kaiken, ei tilausta",
+   "note": "Linkit avaavat App Storen."
+  },
+  "fr-CA": {
+   "cta": "Voir sur l'App Store",
+   "guide": "Plus de guides et de tutoriels d'apps",
+   "heading": "Autres apps du même développeur",
+   "iap": "achat unique pour tout débloquer, sans abonnement",
+   "note": "Les liens ouvrent l'App Store."
+  },
+  "fr-FR": {
+   "cta": "Voir sur l'App Store",
+   "guide": "Plus de guides et de tutoriels d'apps",
+   "heading": "Autres apps du même développeur",
+   "iap": "achat unique pour tout débloquer, sans abonnement",
+   "note": "Les liens ouvrent l'App Store."
+  },
+  "gu-IN": {
+   "cta": "App Store પર જુઓ",
+   "guide": "વધુ ઍપ ગાઇડ અને ટ્યુટોરિયલ",
+   "heading": "એ જ ડેવલપરની વધુ ઍપ",
+   "iap": "અનલૉક કરવા માટે એક વખતની ખરીદી, કોઈ સબ્સ્ક્રિપ્શન નહીં",
+   "note": "લિંક App Store ખોલે છે."
+  },
+  "he": {
+   "cta": "הצג ב-App Store",
+   "guide": "עוד מדריכים והסברים על אפליקציות",
+   "heading": "אפליקציות נוספות מאותו מפתח",
+   "iap": "רכישה חד-פעמית לפתיחת הכול, ללא מנוי",
+   "note": "הקישורים פותחים את App Store."
+  },
+  "hi": {
+   "cta": "App Store में देखें",
+   "guide": "और ऐप गाइड और ट्यूटोरियल",
+   "heading": "इसी डेवलपर के और ऐप",
+   "iap": "अनलॉक करने के लिए एक बार की खरीदारी, कोई सदस्यता नहीं",
+   "note": "लिंक App Store खोलते हैं।"
+  },
+  "hr": {
+   "cta": "Prikaži u App Storeu",
+   "guide": "Više vodiča i uputa za aplikacije",
+   "heading": "Više aplikacija istog razvojnog programera",
+   "iap": "jednokratna kupnja za otključavanje, bez pretplate",
+   "note": "Poveznice otvaraju App Store."
+  },
+  "hu": {
+   "cta": "Megtekintés az App Store-ban",
+   "guide": "További app-útmutatók és tippek",
+   "heading": "További appok ugyanattól a fejlesztőtől",
+   "iap": "egyszeri vásárlás a feloldáshoz, előfizetés nélkül",
+   "note": "A hivatkozások az App Store-t nyitják meg."
+  },
+  "id": {
+   "cta": "Lihat di App Store",
+   "guide": "Panduan dan tutorial aplikasi lainnya",
+   "heading": "Aplikasi lain dari pengembang yang sama",
+   "iap": "sekali beli untuk membuka semua, tanpa langganan",
+   "note": "Tautan membuka App Store."
+  },
+  "it": {
+   "cta": "Vedi su App Store",
+   "guide": "Altre guide e tutorial sulle app",
+   "heading": "Altre app dello stesso sviluppatore",
+   "iap": "acquisto una tantum per sbloccare, nessun abbonamento",
+   "note": "I link aprono l'App Store."
+  },
+  "ja": {
+   "cta": "App Storeで見る",
+   "guide": "アプリの使い方ガイドをもっと見る",
+   "heading": "同じ開発者のその他のApp",
+   "iap": "買い切りでロック解除、サブスクリプションなし",
+   "note": "リンクはApp Storeを開きます。"
+  },
+  "kn-IN": {
+   "cta": "App Store ನಲ್ಲಿ ನೋಡಿ",
+   "guide": "ಇನ್ನಷ್ಟು ಆ್ಯಪ್ ಗೈಡ್‌ಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು",
+   "heading": "ಅದೇ ಡೆವಲಪರ್‌ನ ಇನ್ನಷ್ಟು ಆ್ಯಪ್‌ಗಳು",
+   "iap": "ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಒಂದು ಬಾರಿಯ ಖರೀದಿ, ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ",
+   "note": "ಲಿಂಕ್‌ಗಳು App Store ಅನ್ನು ತೆರೆಯುತ್ತವೆ."
+  },
+  "ko": {
+   "cta": "App Store에서 보기",
+   "guide": "더 많은 앱 가이드와 활용법",
+   "heading": "같은 개발자의 다른 앱",
+   "iap": "한 번 구입으로 잠금 해제, 구독 없음",
+   "note": "링크는 App Store를 엽니다."
+  },
+  "ml-IN": {
+   "cta": "App Store-ൽ കാണുക",
+   "guide": "കൂടുതൽ ആപ്പ് ഗൈഡുകളും ട്യൂട്ടോറിയലുകളും",
+   "heading": "അതേ ഡെവലപ്പറുടെ മറ്റ് ആപ്പുകൾ",
+   "iap": "അൺലോക്ക് ചെയ്യാൻ ഒറ്റത്തവണ വാങ്ങൽ, സബ്‌സ്‌ക്രിപ്‌ഷൻ ഇല്ല",
+   "note": "ലിങ്കുകൾ App Store തുറക്കുന്നു."
+  },
+  "mr-IN": {
+   "cta": "App Store वर पाहा",
+   "guide": "आणखी ॲप मार्गदर्शक आणि ट्युटोरियल",
+   "heading": "याच डेव्हलपरची आणखी ॲप्स",
+   "iap": "अनलॉक करण्यासाठी एकदाच खरेदी, सदस्यता नाही",
+   "note": "लिंक App Store उघडतात."
+  },
+  "ms": {
+   "cta": "Lihat di App Store",
+   "guide": "Lagi panduan dan tutorial app",
+   "heading": "Lagi app daripada pembangun yang sama",
+   "iap": "beli sekali untuk buka semua, tiada langganan",
+   "note": "Pautan membuka App Store."
+  },
+  "nl-NL": {
+   "cta": "Bekijk in de App Store",
+   "guide": "Meer app-gidsen en uitleg",
+   "heading": "Meer apps van dezelfde ontwikkelaar",
+   "iap": "eenmalige aankoop om te ontgrendelen, geen abonnement",
+   "note": "Links openen de App Store."
+  },
+  "no": {
+   "cta": "Vis i App Store",
+   "guide": "Flere appguider og veiledninger",
+   "heading": "Flere apper fra samme utvikler",
+   "iap": "engangskjøp låser opp alt, ingen abonnement",
+   "note": "Lenkene åpner App Store."
+  },
+  "or-IN": {
+   "cta": "App Storeରେ ଦେଖନ୍ତୁ",
+   "guide": "ଅଧିକ ଆପ୍ ଗାଇଡ୍ ଓ ଟ୍ୟୁଟୋରିଆଲ୍",
+   "heading": "ସେହି ଡେଭଲପରଙ୍କ ଅଧିକ ଆପ୍",
+   "iap": "ଅନଲକ୍ କରିବା ପାଇଁ ଥରେ କିଣନ୍ତୁ, କୌଣସି ସବସ୍କ୍ରିପସନ୍ ନାହିଁ",
+   "note": "ଲିଙ୍କଗୁଡ଼ିକ App Store ଖୋଲେ।"
+  },
+  "pa-IN": {
+   "cta": "App Store ਵਿੱਚ ਦੇਖੋ",
+   "guide": "ਹੋਰ ਐਪ ਗਾਈਡਾਂ ਅਤੇ ਟਿਊਟੋਰਿਅਲ",
+   "heading": "ਇਸੇ ਡਿਵੈਲਪਰ ਦੀਆਂ ਹੋਰ ਐਪਾਂ",
+   "iap": "ਅਨਲਾਕ ਕਰਨ ਲਈ ਇੱਕ ਵਾਰ ਖਰੀਦ, ਕੋਈ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ",
+   "note": "ਲਿੰਕ App Store ਖੋਲ੍ਹਦੇ ਹਨ।"
+  },
+  "pl": {
+   "cta": "Zobacz w App Store",
+   "guide": "Więcej poradników i instrukcji do aplikacji",
+   "heading": "Więcej aplikacji tego samego dewelopera",
+   "iap": "jednorazowy zakup odblokowuje wszystko, bez subskrypcji",
+   "note": "Linki otwierają App Store."
+  },
+  "pt-BR": {
+   "cta": "Ver na App Store",
+   "guide": "Mais guias e tutoriais de apps",
+   "heading": "Mais apps do mesmo desenvolvedor",
+   "iap": "compra única para desbloquear, sem assinatura",
+   "note": "Os links abrem a App Store."
+  },
+  "pt-PT": {
+   "cta": "Ver na App Store",
+   "guide": "Mais guias e tutoriais de apps",
+   "heading": "Mais apps do mesmo programador",
+   "iap": "compra única para desbloquear, sem subscrição",
+   "note": "As ligações abrem a App Store."
+  },
+  "ro": {
+   "cta": "Vezi în App Store",
+   "guide": "Mai multe ghiduri și tutoriale pentru aplicații",
+   "heading": "Mai multe aplicații de la același dezvoltator",
+   "iap": "achiziție unică pentru deblocare, fără abonament",
+   "note": "Linkurile deschid App Store."
+  },
+  "ru": {
+   "cta": "Открыть в App Store",
+   "guide": "Больше руководств и инструкций по приложениям",
+   "heading": "Другие приложения того же разработчика",
+   "iap": "разовая покупка для разблокировки, без подписки",
+   "note": "Ссылки открывают App Store."
+  },
+  "sk": {
+   "cta": "Zobraziť v App Store",
+   "guide": "Ďalšie návody a tipy k aplikáciám",
+   "heading": "Ďalšie aplikácie od rovnakého vývojára",
+   "iap": "jednorazový nákup na odomknutie, žiadne predplatné",
+   "note": "Odkazy otvoria App Store."
+  },
+  "sl-SI": {
+   "cta": "Ogled v App Storu",
+   "guide": "Več vodnikov in navodil za aplikacije",
+   "heading": "Več aplikacij istega razvijalca",
+   "iap": "enkraten nakup za odklep, brez naročnine",
+   "note": "Povezave odprejo App Store."
+  },
+  "sv": {
+   "cta": "Visa i App Store",
+   "guide": "Fler appguider och instruktioner",
+   "heading": "Fler appar från samma utvecklare",
+   "iap": "engångsköp låser upp allt, ingen prenumeration",
+   "note": "Länkarna öppnar App Store."
+  },
+  "ta-IN": {
+   "cta": "App Store-இல் பார்க்கவும்",
+   "guide": "மேலும் ஆப்ஸ் வழிகாட்டிகளும் பயன்பாட்டுக் குறிப்புகளும்",
+   "heading": "இதே டெவலப்பரின் மேலும் ஆப்ஸ்",
+   "iap": "அன்லாக் செய்ய ஒரு முறை கொள்முதல், சந்தா இல்லை",
+   "note": "இணைப்புகள் App Store-ஐத் திறக்கும்."
+  },
+  "te-IN": {
+   "cta": "App Storeలో చూడండి",
+   "guide": "మరిన్ని యాప్ గైడ్‌లు మరియు ట్యుటోరియల్స్",
+   "heading": "అదే డెవలపర్ నుండి మరిన్ని యాప్‌లు",
+   "iap": "అన్‌లాక్ చేయడానికి ఒకసారి కొనుగోలు, సబ్‌స్క్రిప్షన్ లేదు",
+   "note": "లింక్‌లు App Storeని తెరుస్తాయి."
+  },
+  "th": {
+   "cta": "ดูใน App Store",
+   "guide": "ดูคู่มือและวิธีใช้แอปเพิ่มเติม",
+   "heading": "แอปอื่นจากผู้พัฒนารายเดียวกัน",
+   "iap": "ซื้อครั้งเดียวเพื่อปลดล็อก ไม่มีการสมัครสมาชิก",
+   "note": "ลิงก์จะเปิด App Store"
+  },
+  "tr": {
+   "cta": "App Store'da görüntüle",
+   "guide": "Daha fazla uygulama rehberi ve ipucu",
+   "heading": "Aynı geliştiricinin diğer uygulamaları",
+   "iap": "kilidi açmak için tek seferlik satın alma, abonelik yok",
+   "note": "Bağlantılar App Store'u açar."
+  },
+  "uk": {
+   "cta": "Переглянути в App Store",
+   "guide": "Більше посібників та інструкцій до застосунків",
+   "heading": "Інші застосунки того самого розробника",
+   "iap": "разова покупка для розблокування, без підписки",
+   "note": "Посилання відкривають App Store."
+  },
+  "ur-PK": {
+   "cta": "App Store پر دیکھیں",
+   "guide": "مزید ایپ گائیڈز اور استعمال کے طریقے",
+   "heading": "اسی ڈویلپر کی مزید ایپس",
+   "iap": "انلاک کرنے کے لیے ایک بار کی خریداری، کوئی سبسکرپشن نہیں",
+   "note": "لنکس App Store کھولتے ہیں۔"
+  },
+  "vi": {
+   "cta": "Xem trên App Store",
+   "guide": "Thêm hướng dẫn và mẹo dùng ứng dụng",
+   "heading": "Ứng dụng khác của cùng nhà phát triển",
+   "iap": "mua một lần để mở khóa, không đăng ký thuê bao",
+   "note": "Liên kết sẽ mở App Store."
+  },
+  "zh-Hans": {
+   "cta": "在 App Store 查看",
+   "guide": "更多 App 使用指南与教程",
+   "heading": "同一开发者的更多 App",
+   "iap": "一次性购买解锁,无订阅",
+   "note": "链接会打开 App Store。"
+  },
+  "zh-Hant": {
+   "cta": "在 App Store 檢視",
+   "guide": "更多 App 使用指南與教學",
+   "heading": "同開發者的更多 App",
+   "iap": "一次購買解鎖,無訂閱",
+   "note": "連結會開啟 App Store。"
+  }
+ },
+ "digest": "26ed9cfbf196d666040702d2b91f017b684ab4b7b5be46623ad82b039b0837ec",
+ "disclosure": "First-party catalogue published by Lumi Studio, the developer of every listed app; not an independent review or third-party ranking.",
+ "guide_url": "https://alice51849.github.io/ios-app-guide/?utm_source=support_site&utm_medium=family_module&utm_campaign=sup_zodira",
+ "ordering": "publisher_defined_relevance_not_a_ranking",
+ "schema": "zodira-support-crosspromo/v1",
+ "sources": {
+  "app_facts": "00_GrowthEngine/support_network/verified-ios-app-finder-catalog snapshot",
+  "app_facts_date": "2026-07-20",
+  "live_state": "00_GrowthEngine/geo/pages/.appstore_live_state.json",
+  "monetization": "App Store Connect read-only monetization cache",
+  "monetization_fetched_at": 1787160608.526618,
+  "store_listing": "Apple iTunes Lookup API cache",
+  "store_listing_fetched_at": 1787785332.958914
+ },
+ "storefront_by_locale": {
+  "ar-SA": "sa",
+  "bn-BD": "in",
+  "ca": "es",
+  "cs": "cz",
+  "da": "dk",
+  "de-DE": "de",
+  "el": "gr",
+  "en-AU": "au",
+  "en-CA": "ca",
+  "en-GB": "gb",
+  "en-US": "us",
+  "es-ES": "es",
+  "es-MX": "mx",
+  "fi": "fi",
+  "fr-CA": "ca",
+  "fr-FR": "fr",
+  "gu-IN": "in",
+  "he": "il",
+  "hi": "in",
+  "hr": "hr",
+  "hu": "hu",
+  "id": "id",
+  "it": "it",
+  "ja": "jp",
+  "kn-IN": "in",
+  "ko": "kr",
+  "ml-IN": "in",
+  "mr-IN": "in",
+  "ms": "my",
+  "nl-NL": "nl",
+  "no": "no",
+  "or-IN": "in",
+  "pa-IN": "in",
+  "pl": "pl",
+  "pt-BR": "br",
+  "pt-PT": "pt",
+  "ro": "ro",
+  "ru": "ru",
+  "sk": "sk",
+  "sl-SI": "si",
+  "sv": "se",
+  "ta-IN": "in",
+  "te-IN": "in",
+  "th": "th",
+  "tr": "tr",
+  "uk": "ua",
+  "ur-PK": "pk",
+  "vi": "vn",
+  "zh-Hans": "cn",
+  "zh-Hant": "tw"
+ }
+}
