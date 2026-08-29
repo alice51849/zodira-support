@@ -280,6 +280,83 @@ FAMILY_STYLES = (
 FAMILY_BLOCK_RE = re.compile(
     r"<!-- ls-family:start -->.*?<!-- ls-family:end -->", re.S)
 ROOT_PAGES = ("index.html", "privacy.html", "terms.html")
+ROOT_CANONICALS = {
+    "index.html": BASE_URL,
+    "privacy.html": BASE_URL + "privacy.html",
+    "terms.html": BASE_URL + "terms.html",
+}
+ROOT_X_DEFAULTS = {
+    "index.html": BASE_URL,
+    "privacy.html": BASE_URL + "privacy.html",
+}
+ROOT_NAV_CONTRACTS = {
+    "index.html": (
+        ("index.html", "support", True),
+        ("privacy.html", "privacy", False),
+    ),
+    "privacy.html": (
+        ("index.html", "support", False),
+        ("privacy.html", "privacy", True),
+    ),
+}
+ROOT_STATIC_ENTRIES = {
+    "index.html": ("en-US/support.html", "Localized support pages"),
+    "privacy.html": ("en-US/privacy.html", "Localized privacy pages"),
+}
+ROOT_PAGE_SURFACES = {
+    "index.html": "index",
+    "privacy.html": "privacy",
+}
+ROOT_HTML_RE = re.compile(r"<html\b([^>]*)>", re.I)
+ROOT_DATA_PAGE_NAME_RE = re.compile(
+    r"(?:^|\s)data-page(?=\s|=|$)", re.I
+)
+ROOT_DATA_PAGE_VALUE_RE = re.compile(
+    r"""(?:^|\s)data-page\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))""",
+    re.I,
+)
+ROOT_DATA_PAGE_ATTR_RE = re.compile(
+    r"""(?:\s+)data-page(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+))?""",
+    re.I,
+)
+ROOT_STATIC_ENTRY_RE = re.compile(
+    r"<!-- root-static-entry:start -->.*?<!-- root-static-entry:end -->",
+    re.S,
+)
+SITEMAP_LASTMOD = "2026-08-29"
+
+
+def root_data_page_state(text: str) -> tuple[int, int, list[str]]:
+    html_tags = ROOT_HTML_RE.findall(text)
+    values = [
+        html.unescape(next((value for value in match if value != ""), ""))
+        for attrs in html_tags
+        for match in ROOT_DATA_PAGE_VALUE_RE.findall(attrs)
+    ]
+    marker_count = sum(
+        len(ROOT_DATA_PAGE_NAME_RE.findall(attrs))
+        for attrs in html_tags
+    )
+    return len(html_tags), marker_count, values
+
+
+def sync_root_data_pages() -> list[str]:
+    """Canonicalize the root page identity used by the legacy locale router."""
+    touched = []
+    for name, page in ROOT_PAGE_SURFACES.items():
+        path = ROOT / name
+        text = path.read_text(encoding="utf-8")
+        html_tags = list(ROOT_HTML_RE.finditer(text))
+        if len(html_tags) != 1:
+            raise SystemExit(f"{name}: expected exactly one html element")
+        match = html_tags[0]
+        attrs = ROOT_DATA_PAGE_ATTR_RE.sub("", match.group(1)).rstrip()
+        opening = f'<html{attrs} data-page="{page}">'
+        updated = text[:match.start()] + opening + text[match.end():]
+        if updated != text:
+            path.write_text(updated, encoding="utf-8")
+            touched.append(name)
+    return touched
 
 
 def sync_root_modules(catalog: dict) -> list[str]:
@@ -298,6 +375,36 @@ def sync_root_modules(catalog: dict) -> list[str]:
             if anchor < 0:
                 raise SystemExit(f"{name}: no anchor for the cross-promo module")
             updated = text[:anchor] + module + "\n" + text[anchor:]
+        if updated != text:
+            path.write_text(updated, encoding="utf-8")
+            touched.append(name)
+    return touched
+
+
+def root_static_entry(name: str) -> str:
+    href, label = ROOT_STATIC_ENTRIES[name]
+    return (
+        f'<!-- root-static-entry:start --><a href="{esc(href)}">'
+        f'{esc(label)}</a><!-- root-static-entry:end -->'
+    )
+
+
+def sync_root_static_entries() -> list[str]:
+    """Keep one crawlable, non-nav entry into each root page's static cluster."""
+    touched = []
+    for name in ROOT_STATIC_ENTRIES:
+        path = ROOT / name
+        text = path.read_text(encoding="utf-8")
+        entry = root_static_entry(name)
+        if ROOT_STATIC_ENTRY_RE.search(text):
+            updated = ROOT_STATIC_ENTRY_RE.sub(lambda _: entry, text, count=1)
+        else:
+            footer = '<div class="footer-links">\n'
+            anchor = text.find(footer)
+            if anchor < 0:
+                raise SystemExit(f"{name}: footer-links anchor missing")
+            insert_at = anchor + len(footer)
+            updated = text[:insert_at] + f"        {entry}\n" + text[insert_at:]
         if updated != text:
             path.write_text(updated, encoding="utf-8")
             touched.append(name)
@@ -464,24 +571,38 @@ h1{margin:12px 0 10px;font-size:clamp(30px,5.6vw,52px);line-height:1.14;font-wei
 # --------------------------------------------------------------------------- #
 # sitemap
 # --------------------------------------------------------------------------- #
-def merge_sitemap() -> None:
+def expected_sitemap_urls() -> list[str]:
+    return [
+        *ROOT_CANONICALS.values(),
+        *(
+            route_url(locale, surface)
+            for locale in OFFICIAL
+            for surface in SURFACES
+        ),
+    ]
+
+
+def write_sitemap() -> None:
     path = ROOT / "sitemap.xml"
-    text = path.read_text(encoding="utf-8")
-    rows = re.findall(r"[ \t]*<url>.*?</url>\n?", text, re.S)
-    known = {re.search(r"<loc>(.*?)</loc>", row, re.S).group(1) for row in rows}
-    additions = [
+    root_rows = [
+        f"  <url><loc>{esc(url)}</loc><lastmod>{SITEMAP_LASTMOD}</lastmod>"
+        f"<changefreq>monthly</changefreq><priority>{priority}</priority></url>\n"
+        for url, priority in (
+            (BASE_URL, "1.0"),
+            (BASE_URL + "privacy.html", "0.7"),
+            (BASE_URL + "terms.html", "0.4"),
+        )
+    ]
+    locale_rows = [
         f"  <url><loc>{esc(route_url(locale, surface))}</loc>"
         "<changefreq>monthly</changefreq>"
         f"<priority>{'0.9' if surface == 'index' else '0.8'}</priority></url>\n"
         for locale in OFFICIAL for surface in SURFACES
-        if route_url(locale, surface) not in known
     ]
-    if not additions:
-        return
     path.write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f'{"".join(rows)}{"".join(additions)}</urlset>\n',
+        f'{"".join(root_rows)}{"".join(locale_rows)}</urlset>\n',
         encoding="utf-8",
     )
 
@@ -489,6 +610,7 @@ def merge_sitemap() -> None:
 def build() -> dict:
     locales = load_locales()
     catalog = load_catalog()
+    root_data_pages = sync_root_data_pages()
     (ROOT / "surface.css").write_text(STYLESHEET, encoding="utf-8")
     written = 0
     for locale in OFFICIAL:
@@ -497,9 +619,16 @@ def build() -> dict:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(render(locales, catalog, locale, surface), encoding="utf-8")
             written += 1
-    merge_sitemap()
+    write_sitemap()
     root_pages = sync_root_modules(catalog)
-    return {"written": written, "root_pages_synced": root_pages, "digest": digest()}
+    root_entries = sync_root_static_entries()
+    return {
+        "written": written,
+        "root_data_pages_synced": root_data_pages,
+        "root_pages_synced": root_pages,
+        "root_static_entries_synced": root_entries,
+        "digest": digest(),
+    }
 
 
 # --------------------------------------------------------------------------- #
@@ -525,6 +654,66 @@ def attr_values(text: str, tag: str, attr: str,
     return out
 
 
+def attributes(source: str) -> dict[str, str]:
+    return {
+        name.lower(): html.unescape(value)
+        for name, _, value in re.findall(
+            r"""([:\w-]+)\s*=\s*(["'])(.*?)\2""", source, re.S
+        )
+    }
+
+
+def alternate_values(text: str, hreflang: str) -> list[str]:
+    values = []
+    for match in re.finditer(r"<link\b([^>]*)>", text, re.I):
+        attrs = attributes(match.group(1))
+        if (attrs.get("rel", "").lower() == "alternate"
+                and attrs.get("hreflang") == hreflang
+                and attrs.get("href")):
+            values.append(attrs["href"])
+    return values
+
+
+def container_anchors(text: str, tag: str,
+                      class_name: str) -> list[dict[str, str]]:
+    pattern = rf"<{re.escape(tag)}\b([^>]*)>(.*?)</{re.escape(tag)}>"
+    for match in re.finditer(pattern, text, re.I | re.S):
+        container_attrs = attributes(match.group(1))
+        if class_name not in container_attrs.get("class", "").split():
+            continue
+        anchors = []
+        for anchor in re.finditer(r"<a\b([^>]*)>(.*?)</a>", match.group(2),
+                                  re.I | re.S):
+            record = attributes(anchor.group(1))
+            record["text"] = visible_text(anchor.group(2))
+            anchors.append(record)
+        return anchors
+    return []
+
+
+def root_nav_anchors(text: str) -> list[dict[str, str]]:
+    return container_anchors(text, "nav", "nav")
+
+
+def footer_link_anchors(text: str) -> list[dict[str, str]]:
+    return container_anchors(text, "div", "footer-links")
+
+
+def frozen_js_map(source: str, name: str) -> dict[str, str]:
+    match = re.search(
+        rf"const\s+{re.escape(name)}\s*=\s*Object\.freeze\((\{{.*?\}})\);",
+        source,
+        re.S,
+    )
+    if not match:
+        return {}
+    try:
+        value = json.loads(match.group(1))
+    except json.JSONDecodeError:
+        return {}
+    return value if isinstance(value, dict) else {}
+
+
 def resolve_local(current: str, href: str) -> Path | None:
     if not href or href.startswith(("#", "mailto:", "tel:")):
         return None
@@ -544,6 +733,33 @@ def resolve_local(current: str, href: str) -> Path | None:
     return candidate
 
 
+def relative_anchor_target(current: str, href: str) -> str | None:
+    target = resolve_local(current, href)
+    if target is None:
+        return None
+    try:
+        return target.relative_to(ROOT).as_posix()
+    except ValueError:
+        return None
+
+
+def crawl_anchor_graph(starts: set[str], nodes: set[str]) -> set[str]:
+    reached = set(starts)
+    pending = list(starts)
+    while pending:
+        current = pending.pop()
+        path = ROOT / current
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for href in attr_values(text, "a", "href"):
+            target = relative_anchor_target(current, href)
+            if target in nodes and target not in reached:
+                reached.add(target)
+                pending.append(target)
+    return reached
+
+
 def check() -> dict:
     locales = load_locales()
     catalog = load_catalog()
@@ -551,6 +767,7 @@ def check() -> dict:
     expected_hreflang = set(OFFICIAL) | {"x-default"}
     store_urls = {app["canonical_app_store_url"] for app in catalog["apps"]}
     visible: dict[tuple[str, str], str] = {}
+    canonical_owners: dict[str, list[str]] = {}
     checked = 0
 
     for locale in OFFICIAL:
@@ -573,6 +790,8 @@ def check() -> dict:
             canonical = attr_values(text, "link", "href", ("rel", "canonical"))
             if canonical != [route_url(locale, surface)]:
                 errors.append(f"{relative}: canonical mismatch")
+            else:
+                canonical_owners.setdefault(canonical[0], []).append(relative)
 
             found: dict[str, str] = {}
             for match in re.finditer(r"<link\b([^>]*)>", text, re.I):
@@ -654,16 +873,38 @@ def check() -> dict:
     for locale in OFFICIAL:
         if len({visible.get((locale, surface)) for surface in SURFACES}) != len(SURFACES):
             errors.append(f"{locale}: surfaces are not distinct")
+    if len(canonical_owners) != len(OFFICIAL) * len(SURFACES):
+        errors.append("static surfaces: canonical targets are not unique")
+    for canonical, owners in canonical_owners.items():
+        if len(owners) != 1:
+            errors.append(f"static surfaces: canonical {canonical} owned by {owners}")
 
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-    for locale in OFFICIAL:
-        for surface in SURFACES:
-            if route_url(locale, surface) not in sitemap:
-                errors.append(f"sitemap.xml: missing {route(locale, surface)}")
+    sitemap_urls = [
+        html.unescape(value)
+        for value in re.findall(r"<loc>([^<]+)</loc>", sitemap)
+    ]
+    expected_urls = expected_sitemap_urls()
+    if any(urlsplit(url).query or urlsplit(url).fragment for url in sitemap_urls):
+        errors.append("sitemap.xml: query strings and fragments are forbidden")
+    if len(sitemap_urls) != len(set(sitemap_urls)):
+        errors.append("sitemap.xml: duplicate URL")
+    if sitemap_urls != expected_urls:
+        missing = sorted(set(expected_urls) - set(sitemap_urls))
+        extra = sorted(set(sitemap_urls) - set(expected_urls))
+        errors.append(f"sitemap.xml: exact static contract mismatch "
+                      f"missing={missing} extra={extra}")
 
     expected_root = family_module(catalog, "en-US", standalone=True)
     for name in ROOT_PAGES:
         text = (ROOT / name).read_text(encoding="utf-8")
+        canonical = attr_values(text, "link", "href", ("rel", "canonical"))
+        if canonical != [ROOT_CANONICALS[name]]:
+            errors.append(f"{name}: root canonical mismatch")
+        if name in ROOT_X_DEFAULTS:
+            x_default = alternate_values(text, "x-default")
+            if x_default != [ROOT_X_DEFAULTS[name]]:
+                errors.append(f"{name}: root x-default mismatch")
         module = FAMILY_BLOCK_RE.search(text)
         if not module:
             errors.append(f"{name}: cross-promo module missing")
@@ -673,6 +914,89 @@ def check() -> dict:
             if href.startswith("https://apps.apple.com/") and href not in store_urls:
                 errors.append(f"{name}: App Store URL is not the exact catalog URL")
 
+    for name, contract in ROOT_NAV_CONTRACTS.items():
+        text = (ROOT / name).read_text(encoding="utf-8")
+        html_count, marker_count, data_pages = root_data_page_state(text)
+        if (
+            html_count != 1
+            or marker_count != 1
+            or data_pages != [ROOT_PAGE_SURFACES[name]]
+        ):
+            errors.append(
+                f"{name}: html data-page must be exactly "
+                f"{ROOT_PAGE_SURFACES[name]}"
+            )
+        anchors = root_nav_anchors(text)
+        if len(anchors) != len(contract):
+            errors.append(f"{name}: root nav must contain exactly support and privacy")
+            continue
+        destinations = []
+        for anchor, (href, key, current) in zip(anchors, contract):
+            destinations.append(anchor.get("href", ""))
+            if anchor.get("href") != href or anchor.get("data-i18n") != key:
+                errors.append(f"{name}: root nav destination contract mismatch")
+            if (anchor.get("aria-current") == "page") != current:
+                errors.append(f"{name}: root nav current-page state mismatch")
+            if "data-surface" in anchor or "data-localized-link" in anchor:
+                errors.append(f"{name}: root nav must stay static and unambiguous")
+        if len(destinations) != len(set(destinations)):
+            errors.append(f"{name}: root nav has duplicate destinations")
+        for locale, copy in locales.items():
+            labels = [
+                " ".join(copy[key].split()).casefold()
+                for _, key, _ in contract
+            ]
+            if len(labels) != len(set(labels)):
+                errors.append(f"{name}: duplicate visible nav label in {locale}")
+
+    required_static = {
+        route(locale, surface)
+        for locale in OFFICIAL
+        for surface in SURFACES
+    }
+    for name, (expected_href, expected_label) in ROOT_STATIC_ENTRIES.items():
+        text = (ROOT / name).read_text(encoding="utf-8")
+        marker = ROOT_STATIC_ENTRY_RE.findall(text)
+        if marker != [root_static_entry(name)]:
+            errors.append(f"{name}: generated static footer entry is stale")
+        footer = footer_link_anchors(text)
+        labels = [" ".join(anchor.get("text", "").split()).casefold()
+                  for anchor in footer]
+        if len(labels) != len(set(labels)):
+            errors.append(f"{name}: footer links have duplicate visible labels")
+        static_anchors = [
+            anchor for anchor in footer
+            if relative_anchor_target(name, anchor.get("href", "")) in required_static
+        ]
+        if [(anchor.get("href"), anchor.get("text")) for anchor in static_anchors] != [
+            (expected_href, expected_label)
+        ]:
+            errors.append(f"{name}: static footer entry contract mismatch")
+
+    graph_nodes = required_static | set(ROOT_STATIC_ENTRIES)
+    reached = crawl_anchor_graph(set(ROOT_STATIC_ENTRIES), graph_nodes)
+    unreachable = sorted(required_static - reached)
+    if unreachable:
+        errors.append(
+            f"root anchor graph reaches {len(required_static) - len(unreachable)}/"
+            f"{len(required_static)} required surfaces; missing={unreachable[:10]}"
+        )
+
+    loader = (ROOT / "localize.js").read_text(encoding="utf-8")
+    route_map = frozen_js_map(loader, "STATIC_LOCALE_ROUTES")
+    if list(route_map) != OFFICIAL or route_map != {code: code for code in OFFICIAL}:
+        errors.append("localize.js: static locale route map is not fixed exact-50")
+    surface_map = frozen_js_map(loader, "STATIC_SURFACES")
+    if surface_map != {"index": "support.html", "privacy": "privacy.html"}:
+        errors.append("localize.js: legacy root surface map mismatch")
+    for contract in (
+        'preserved.delete("lang")',
+        "next.hash = window.location.hash",
+        "window.location.replace(target.href)",
+    ):
+        if contract not in loader:
+            errors.append(f"localize.js: missing legacy route contract {contract!r}")
+
     if errors:
         raise SystemExit("\n".join(errors[:80]))
     return {
@@ -680,6 +1004,7 @@ def check() -> dict:
         "locales": len(OFFICIAL),
         "surfaces_per_locale": len(SURFACES),
         "surfaces_checked": checked,
+        "anchor_surfaces_reachable": len(required_static & reached),
         "crosspromo_apps": [app["key"] for app in catalog["apps"]],
         "own_app_store_url": None,
         "digest": digest(),

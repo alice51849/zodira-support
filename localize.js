@@ -6,10 +6,109 @@
     throw new Error("Zodira locale dictionary is unavailable");
   }
 
-  const supported = Object.keys(locales);
+  const STATIC_LOCALE_ROUTES = Object.freeze({
+    "ar-SA": "ar-SA",
+    "bn-BD": "bn-BD",
+    "ca": "ca",
+    "zh-Hans": "zh-Hans",
+    "zh-Hant": "zh-Hant",
+    "hr": "hr",
+    "cs": "cs",
+    "da": "da",
+    "nl-NL": "nl-NL",
+    "en-AU": "en-AU",
+    "en-CA": "en-CA",
+    "en-GB": "en-GB",
+    "en-US": "en-US",
+    "fi": "fi",
+    "fr-CA": "fr-CA",
+    "fr-FR": "fr-FR",
+    "de-DE": "de-DE",
+    "el": "el",
+    "gu-IN": "gu-IN",
+    "he": "he",
+    "hi": "hi",
+    "hu": "hu",
+    "id": "id",
+    "it": "it",
+    "ja": "ja",
+    "kn-IN": "kn-IN",
+    "ko": "ko",
+    "ms": "ms",
+    "ml-IN": "ml-IN",
+    "mr-IN": "mr-IN",
+    "no": "no",
+    "or-IN": "or-IN",
+    "pl": "pl",
+    "pt-BR": "pt-BR",
+    "pt-PT": "pt-PT",
+    "pa-IN": "pa-IN",
+    "ro": "ro",
+    "ru": "ru",
+    "sk": "sk",
+    "sl-SI": "sl-SI",
+    "es-MX": "es-MX",
+    "es-ES": "es-ES",
+    "sv": "sv",
+    "ta-IN": "ta-IN",
+    "te-IN": "te-IN",
+    "th": "th",
+    "tr": "tr",
+    "uk": "uk",
+    "ur-PK": "ur-PK",
+    "vi": "vi"
+  });
+  const STATIC_SURFACES = Object.freeze({
+    "index": "support.html",
+    "privacy": "privacy.html"
+  });
+  const supported = Object.keys(STATIC_LOCALE_ROUTES);
+  const dictionaryLocales = Object.keys(locales);
+  if (
+    dictionaryLocales.length !== supported.length
+    || dictionaryLocales.some((code, index) => code !== supported[index])
+  ) {
+    throw new Error("Zodira locale dictionary and static route map differ");
+  }
+
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
-  const locale = requested && Object.hasOwn(locales, requested) ? requested : "en-US";
+  const page = document.documentElement.dataset.page;
+  const surface = Object.hasOwn(STATIC_SURFACES, page)
+    ? STATIC_SURFACES[page]
+    : null;
+
+  const staticSurfaceURL = (localeCode) => {
+    if (!surface || !Object.hasOwn(STATIC_LOCALE_ROUTES, localeCode)) {
+      return null;
+    }
+    const next = new URL(
+      `${STATIC_LOCALE_ROUTES[localeCode]}/${surface}`,
+      window.location.href,
+    );
+    const preserved = new URLSearchParams(window.location.search);
+    preserved.delete("lang");
+    next.search = preserved.toString();
+    next.hash = window.location.hash;
+    return next;
+  };
+
+  if (requested && Object.hasOwn(STATIC_LOCALE_ROUTES, requested)) {
+    const target = staticSurfaceURL(requested);
+    if (target) {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        const staticCanonical = new URL(target.href);
+        staticCanonical.search = "";
+        staticCanonical.hash = "";
+        canonical.href = staticCanonical.href;
+      }
+      window.location.replace(target.href);
+      return;
+    }
+  }
+
+  const locale = "en-US";
   const copy = locales[locale];
   if (!copy) {
     throw new Error(`Missing Zodira locale: ${locale}`);
@@ -58,33 +157,11 @@
       select.append(option);
     }
     select.addEventListener("change", () => {
-      const next = new URL(window.location.href);
-      next.searchParams.set("lang", select.value);
-      window.location.assign(next.href);
+      const next = staticSurfaceURL(select.value);
+      if (next) {
+        window.location.assign(next.href);
+      }
     });
-  }
-
-  for (const anchor of document.querySelectorAll("a[data-localized-link]")) {
-    const href = anchor.getAttribute("href");
-    if (!href) continue;
-    const localized = new URL(href, window.location.href);
-    localized.searchParams.set("lang", locale);
-    anchor.href = localized.href;
-  }
-
-  for (const anchor of document.querySelectorAll("a[data-surface]")) {
-    const file = anchor.dataset.surface;
-    if (!file) continue;
-    anchor.href = `${locale}/${file}`;
-  }
-
-  if (requested === locale) {
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      const localizedCanonical = new URL(canonical.href);
-      localizedCanonical.searchParams.set("lang", locale);
-      canonical.href = localizedCanonical.href;
-    }
   }
 
   document.documentElement.dataset.localeReady = locale;

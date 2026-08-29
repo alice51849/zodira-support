@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US" data-page="support">
+<html lang="en-US" data-page="index">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,6 +7,7 @@
   <meta name="description" content="Official localized support for Zodira, a private offline decision journal." data-i18n-content="description">
   <meta name="theme-color" content="#090716">
   <link rel="canonical" href="https://alice51849.github.io/zodira-support/">
+  <link rel="alternate" hreflang="x-default" href="https://alice51849.github.io/zodira-support/">
   <link rel="stylesheet" href="styles.css">
   <script defer src="locales.js"></script>
   <script defer src="localize.js"></script>
@@ -14,11 +15,10 @@
 <body>
   <div class="shell">
     <header class="site-header">
-      <a class="brand" href="index.html" data-localized-link>Zodira</a>
+      <a class="brand" href="index.html">Zodira</a>
       <nav class="nav" aria-label="Support navigation">
-        <a href="index.html" aria-current="page" data-localized-link data-i18n="support">Support</a>
-        <a href="privacy.html" data-localized-link data-i18n="privacy">Privacy</a>
-        <a href="en-US/support.html" data-surface="support.html" data-i18n="support">Support</a>
+        <a href="index.html" aria-current="page" data-i18n="support">Support</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
         <label class="locale-picker">
           <span aria-hidden="true">🌐</span>
           <select id="locale-select" aria-label="Language"></select>
@@ -33,7 +33,7 @@
         <p class="lead localized-copy" data-i18n="description">Zodira is a private offline decision journal for questions, options, evidence, next steps and outcome reviews.</p>
         <div class="actions">
           <a class="button" href="#support" data-i18n="support">Support</a>
-          <a class="button secondary" href="privacy.html" data-localized-link data-i18n="privacy">Privacy</a>
+          <a class="button secondary" href="privacy.html" data-i18n="privacy">Privacy</a>
         </div>
       </section>
 
@@ -74,8 +74,9 @@
 <footer class="site-footer">
       <span>© 2026 Lumi Studio · Zodira</span>
       <div class="footer-links">
-        <a href="privacy.html" data-localized-link data-i18n="privacy">Privacy</a>
-        <a href="terms.html" data-localized-link>Zodira EULA</a>
+        <!-- root-static-entry:start --><a href="en-US/support.html">Localized support pages</a><!-- root-static-entry:end -->
+        <a href="privacy.html" data-i18n="privacy">Privacy</a>
+        <a href="terms.html">Zodira EULA</a>
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple EULA</a>
         <a href="https://alice51849.github.io/ios-app-guide/?utm_source=support_site&amp;utm_medium=family_module&amp;utm_campaign=sup_zodira" rel="noopener">Lumi Studio</a>
         <a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Support">hourstag.app@gmail.com</a>

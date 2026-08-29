@@ -7,7 +7,7 @@ Contact for every surface: <hourstag.app@gmail.com>
 
 | Path | Purpose |
 | --- | --- |
-| `index.html`, `privacy.html`, `terms.html` | Root pages. Rendered from `locales.js` by `localize.js`; `?lang=<locale>` switches all 50 locales client-side. |
+| `index.html`, `privacy.html`, `terms.html` | Root fallback pages. A valid legacy `?lang=<locale>` request is replaced with its fixed static locale route; other query parameters and the hash are preserved. |
 | `<locale>/index.html`, `<locale>/support.html`, `<locale>/privacy.html` | Static, crawlable required surfaces for every one of Apple's 50 product-page locales (150 files). |
 | `locales.js` | Single source of truth for the native 50-locale product copy. |
 | `source/crosspromo_catalog.json` | Verified first-party app facts used by the cross-promo module. |
@@ -17,9 +17,10 @@ Contact for every surface: <hourstag.app@gmail.com>
 ## Commands
 
 ```bash
-python3 tools/support_surfaces.py build   # regenerate the 150 static surfaces, surface.css, sitemap rows and the root cross-promo module
+python3 tools/support_surfaces.py build   # regenerate static surfaces and pin root generated modules/page identities
 python3 tools/support_surfaces.py check   # full rule-based validation (must print "PASS")
 python3 lint_site.py                      # existing site lint (run from a checkout beside the app project)
+node --test tests/*.test.js               # exercise legacy query migration and route confinement
 ```
 
 `lint_site.py` reads the app project's store metadata from `../StoreAssets`,
@@ -30,8 +31,20 @@ Zodira app project.
 
 * The locale set is exactly Apple's official 50 product-page locales; every
   locale has `index`, `support` and `privacy`.
+* The sitemap contains the three root fallback pages plus the 150 static locale
+  surfaces exactly once, with no query-string URLs.
+* Legacy `?lang=` support and privacy URLs use a fixed exact-50 route map and
+  replace themselves with the matching static surface without permitting an
+  external redirect.
+* Root routing identity is exact and generator-pinned:
+  `index.html data-page=index`, `privacy.html data-page=privacy`; missing,
+  wrong or duplicate markers fail both checks and the Node route tests.
+* Each localized root fallback has one generated footer anchor into its
+  corresponding static cluster. Anchor-only graph traversal from the roots must
+  reach all 150 required locale surfaces.
 * `canonical`, the 50 `hreflang` alternates and `x-default` resolve to real
-  files; `x-default` always points at `en-US`.
+  files. Static clusters use `en-US` as `x-default`; root fallback pages keep a
+  self-referential canonical and `x-default`.
 * `hourstag.app@gmail.com` is the only address anywhere on the site.
 * No raw localization keys, placeholders, retired brand names, secrets, or
   English copy reused for a non-English locale; RTL, Indic, CJK and Cyrillic
