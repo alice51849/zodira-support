@@ -5,11 +5,32 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 import json
+import os
 import re
 import sys
 
 ROOT = Path(__file__).resolve().parent
-APP_ROOT = ROOT.parent
+
+
+def _find_app_root() -> Path | None:
+    """Locate the Zodira app repo that owns the canonical App Store metadata.
+
+    The support site used to live inside the app repo; it is now its own
+    repository, so the metadata is looked up next to it, in ~/22_Zodira, or
+    wherever ZODIRA_APP_ROOT points.
+    """
+    candidates = []
+    if env := os.environ.get("ZODIRA_APP_ROOT"):
+        candidates.append(Path(env).expanduser())
+    candidates.append(ROOT.parent)
+    candidates.append(Path.home() / "22_Zodira")
+    for candidate in candidates:
+        if (candidate / "StoreAssets/metadata").is_dir():
+            return candidate
+    return None
+
+
+APP_ROOT = _find_app_root()
 SITE_ROOT = "https://open.cait518.cc/zodira-support/"
 # App Store Connect still has the github.io URLs registered, and this
 # change deliberately does not touch App Store metadata: GitHub Pages
@@ -65,10 +86,9 @@ SCRIPT_MARKERS = {
     "uk": r"[\u0400-\u04ff]",
     "ur-PK": r"[\u0600-\u06ff]",
 }
-CANONICAL_METADATA = APP_ROOT / "StoreAssets/metadata/build15-exact50.json"
-FASTLANE_METADATA = APP_ROOT / "fastlane/metadata"
-BACKUP_METADATA = APP_ROOT / "fastlane/metadata_backup_aso"
-URL_BUILDER = APP_ROOT / "tools/build_asc_meta.py"
+CANONICAL_METADATA = (
+    APP_ROOT / "StoreAssets/metadata/build19-exact50.json" if APP_ROOT else None
+)
 ALLOWED_EMAIL = "hourstag.app@gmail.com"
 BUNDLE_ID = "com.alice51849." + "Astrea"
 EMAIL_RE = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
@@ -237,17 +257,11 @@ def lint_identity_and_contact() -> list[str]:
         "index.html", "privacy.html", "terms.html", "robots.txt", "sitemap.xml",
         "styles.css", "locales.js", "localize.js",
     )
-    current_metadata_files = [
-        CANONICAL_METADATA,
-        *FASTLANE_METADATA.glob("*/*.txt"),
-        URL_BUILDER,
-    ]
-    public_sources = [(ROOT / name) for name in site_files] + current_metadata_files
-    url_mirrors = list(FASTLANE_METADATA.glob("*/*_url.txt"))
-    if BACKUP_METADATA.is_dir():
-        url_mirrors.extend(BACKUP_METADATA.glob("*/*_url.txt"))
+    # The site is its own repository now: it lints what it publishes.  The
+    # fastlane URL mirrors inside the app repo keep their own gate there.
+    public_sources = [(ROOT / name) for name in site_files]
 
-    for path in public_sources + url_mirrors:
+    for path in public_sources:
         source = path.read_text(encoding="utf-8")
         folded = source.casefold()
         for token in LEGACY_TOKENS:
@@ -278,66 +292,98 @@ def lint_identity_and_contact() -> list[str]:
     return errors
 
 
-def lint_metadata_urls(
+PRIMARY_TABS = ("Today", "Tarot", "Astrology", "Destiny", "Me")
+
+
+def lint_store_consistency(
     locales: dict[str, dict[str, str]],
 ) -> list[str]:
+    """The support site must describe the product the App Store listing sells.
+
+    A reviewer opens the support URL straight from the listing, so any drift
+    between the two is a Guideline 2.3 (Accurate Metadata) risk.  The canonical
+    store metadata is the single source of truth: the site reuses its
+    sentences rather than paraphrasing them, and the secondary Decision
+    Journal must never be presented as the product.
+    """
     errors: list[str] = []
+    if CANONICAL_METADATA is None or not CANONICAL_METADATA.is_file():
+        return [
+            "canonical App Store metadata not found; "
+            "set ZODIRA_APP_ROOT to the Zodira app repository"
+        ]
     canonical = json.loads(CANONICAL_METADATA.read_text(encoding="utf-8"))
-    if tuple(canonical.get("_meta", {}).get("localeOrder", ())) != OFFICIAL_LOCALES:
+    meta = canonical.get("_meta", {})
+    if tuple(meta.get("localeOrder", ())) != OFFICIAL_LOCALES:
         errors.append("canonical metadata localeOrder is not the official exact-50 order")
     if set(canonical) - {"_meta"} != LOCALE_SET:
         errors.append("canonical metadata locale records are not exact-50")
+    if tuple(meta.get("primaryTabs", ())) != PRIMARY_TABS:
+        errors.append(f"canonical metadata primaryTabs must be {list(PRIMARY_TABS)}")
 
-    actual_dirs = {path.name for path in FASTLANE_METADATA.iterdir() if path.is_dir()}
-    if actual_dirs != LOCALE_SET:
-        errors.append(
-            "fastlane metadata locale mismatch "
-            f"missing={sorted(LOCALE_SET - actual_dirs)} "
-            f"extra={sorted(actual_dirs - LOCALE_SET)}"
-        )
     for locale in OFFICIAL_LOCALES:
-        expected = {
-            "supportUrl": expected_support_url(locale),
-            "privacyPolicyUrl": expected_privacy_url(locale),
-        }
         record = canonical.get(locale, {})
-        for field, value in expected.items():
-            if record.get(field) != value:
-                errors.append(f"canonical {locale}/{field} must be {value}")
-        if locale in locales:
-            if locales[locale].get("description") != record.get("description"):
-                errors.append(f"locales.js: {locale}/description differs from canonical")
-            if locales[locale].get("workflow") != record.get("whatsNew"):
-                errors.append(f"locales.js: {locale}/workflow differs from canonical")
+        site = locales.get(locale)
+        if not isinstance(site, dict) or not record:
+            continue
 
-        files = {
-            "support_url.txt": expected_support_url(locale),
-            "privacy_url.txt": expected_privacy_url(locale),
-            "marketing_url.txt": expected_support_url(locale),
-        }
-        for filename, value in files.items():
-            path = FASTLANE_METADATA / locale / filename
-            actual = path.read_text(encoding="utf-8") if path.is_file() else ""
+        for field, value in (
+            ("supportUrl", expected_support_url(locale)),
+            ("privacyPolicyUrl", expected_privacy_url(locale)),
+        ):
+            actual = record.get(field, "")
             if actual != value:
-                errors.append(f"{path}: expected {value!r}, found {actual!r}")
-            parsed = urlsplit(actual)
-            query = parse_qs(parsed.query, strict_parsing=True) if actual else {}
+                errors.append(f"canonical {locale}/{field} must be {value}")
+            query = parse_qs(urlsplit(actual).query, strict_parsing=True) if actual else {}
             if query != {"lang": [locale]}:
-                errors.append(f"{path}: locale query must be exactly lang={locale}")
+                errors.append(f"canonical {locale}/{field}: query must be exactly lang={locale}")
 
-    if BACKUP_METADATA.is_dir():
-        for path in BACKUP_METADATA.glob("*/*_url.txt"):
-            locale = path.parent.name
-            if locale not in LOCALE_SET:
-                errors.append(f"{path}: unexpected backup locale")
-                continue
-            expected = (
-                expected_privacy_url(locale)
-                if path.name == "privacy_url.txt"
-                else expected_support_url(locale)
+        store_name = record.get("name", "").strip()
+        site_name = site.get("name", "").strip()
+        if site_name != store_name and not site_name.startswith(f"{store_name} — "):
+            errors.append(
+                f"locales.js: {locale}/name {site_name!r} does not match "
+                f"the App Store name {store_name!r}"
             )
-            if path.read_text(encoding="utf-8") != expected:
-                errors.append(f"{path}: stale direct URL mirror")
+        if site.get("subtitle") != record.get("subtitle"):
+            errors.append(f"locales.js: {locale}/subtitle differs from the App Store subtitle")
+        for key in ("titleSupport", "titlePrivacy"):
+            if not site.get(key, "").startswith(store_name):
+                errors.append(f"locales.js: {locale}/{key} must lead with the App Store name")
+
+        paragraphs = [part.strip() for part in record.get("description", "").split("\n\n")]
+        lines = [line.strip() for line in site.get("description", "").splitlines() if line.strip()]
+        if not 3 <= len(lines) <= 6:
+            errors.append(
+                f"locales.js: {locale}/description must be 3-6 lines, found {len(lines)}"
+            )
+        reused = sum(1 for part in paragraphs if part and part in lines)
+        if reused < 3:
+            errors.append(
+                f"locales.js: {locale}/description reuses only {reused} "
+                "verbatim App Store paragraphs"
+            )
+
+        disclosure = record.get("journalFreeDisclosure", "").strip()
+        if disclosure:
+            if not lines or not lines[-1].startswith(disclosure):
+                errors.append(
+                    f"locales.js: {locale}/description must close with the exact "
+                    "App Store Decision Journal disclosure"
+                )
+            if lines and lines[0].startswith(disclosure):
+                errors.append(
+                    f"locales.js: {locale}/description leads with the Decision Journal, "
+                    "which is a secondary feature"
+                )
+
+        workflow = site.get("workflow", "")
+        missing_steps = [step for step in ("01", "02", "03", "04", "05") if step not in workflow]
+        if missing_steps:
+            errors.append(
+                f"locales.js: {locale}/workflow is missing the primary-tab "
+                f"walkthrough steps {missing_steps}"
+            )
     return errors
 
 
@@ -345,14 +391,21 @@ def lint_sitemap_and_robots() -> list[str]:
     errors: list[str] = []
     source = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     urls = set(re.findall(r"<loc>([^<]+)</loc>", source))
+    # The sitemap is served from this site's own origin, so it may only list
+    # URLs on that origin -- the ASC-registered github.io URLs still resolve,
+    # but a cross-origin sitemap entry is invalid.  Every canonical page must
+    # be listed; localized ?lang= variants of those pages are optional.
     expected = set(PAGES.values())
-    expected.update(expected_support_url(locale) for locale in OFFICIAL_LOCALES)
-    expected.update(expected_privacy_url(locale) for locale in OFFICIAL_LOCALES)
-    if urls != expected:
-        errors.append(
-            "sitemap.xml: URL mismatch "
-            f"missing={sorted(expected - urls)} extra={sorted(urls - expected)}"
-        )
+    if missing := sorted(expected - urls):
+        errors.append(f"sitemap.xml: missing canonical pages {missing}")
+    for url in sorted(urls - expected):
+        parsed = urlsplit(url)
+        base = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+        query = parse_qs(parsed.query, strict_parsing=True) if parsed.query else {}
+        if base not in expected:
+            errors.append(f"sitemap.xml: URL outside this site {url}")
+        elif set(query) != {"lang"} or query["lang"][0] not in LOCALE_SET:
+            errors.append(f"sitemap.xml: localized URL must carry one official lang {url}")
     robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
     expected_line = f"Sitemap: {SITE_ROOT}sitemap.xml"
     if expected_line not in robots:
@@ -366,7 +419,7 @@ def main() -> None:
     for name, canonical in PAGES.items():
         errors.extend(lint_page(name, canonical, locale_keys))
     errors.extend(lint_identity_and_contact())
-    errors.extend(lint_metadata_urls(locales))
+    errors.extend(lint_store_consistency(locales))
     errors.extend(lint_sitemap_and_robots())
 
     loader = (ROOT / "localize.js").read_text(encoding="utf-8")
@@ -382,7 +435,7 @@ def main() -> None:
         raise SystemExit(1)
     print(
         "site lint passed: canonical identity, exact-50 native dictionary, "
-        "localized URLs, mirrors, sitemap, contact and legal bundle exception"
+        "App Store product consistency, sitemap, contact and legal bundle exception"
     )
 
 
