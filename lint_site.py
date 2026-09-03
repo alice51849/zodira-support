@@ -10,7 +10,12 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 APP_ROOT = ROOT.parent
-SITE_ROOT = "https://alice51849.github.io/zodira-support/"
+SITE_ROOT = "https://open.cait518.cc/zodira-support/"
+# App Store Connect still has the github.io URLs registered, and this
+# change deliberately does not touch App Store metadata: GitHub Pages
+# remains the origin, so those URLs keep resolving.  Page-facing URLs
+# (canonical, alternates, sitemap, robots) moved to our own domain.
+ASC_SITE_ROOT = "https://alice51849.github.io/zodira-support/"
 PAGES = {
     "index.html": SITE_ROOT,
     "privacy.html": f"{SITE_ROOT}privacy.html",
@@ -115,11 +120,11 @@ class PageParser(HTMLParser):
 
 
 def expected_support_url(locale: str) -> str:
-    return f"{SITE_ROOT}?lang={locale}"
+    return f"{ASC_SITE_ROOT}?lang={locale}"
 
 
 def expected_privacy_url(locale: str) -> str:
-    return f"{SITE_ROOT}privacy.html?lang={locale}"
+    return f"{ASC_SITE_ROOT}privacy.html?lang={locale}"
 
 
 def parse_locales() -> tuple[dict[str, dict[str, str]], list[str]]:
