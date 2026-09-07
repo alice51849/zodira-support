@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title data-i18n="titlePrivacy">Zodira — Privacy</title>
-  <meta name="description" content="Zodira keeps birth data, readings and journal entries on the device, with no account, ads, tracking, analytics or AI upload." data-i18n-content="noCollection">
+  <meta name="description" content="Zodira has no developer-operated account or backend. The app has no ads, tracking, usage analytics or AI uploads. We do not collect your birth details, readings or journal through the app. Apple services, paired-device transfers, sharing destinations and information you choose to email us are separate, as explained below." data-i18n-content="noCollection">
   <meta name="theme-color" content="#090716">
   <link rel="canonical" href="https://open.cait518.cc/zodira-support/privacy.html">
   <link rel="stylesheet" href="styles.css">
@@ -30,31 +30,47 @@
         <p class="eyebrow" data-i18n="privacy">Privacy</p>
         <h1 data-i18n="name">Zodira</h1>
         <p class="lead localized-copy" data-i18n="description">Zodira brings Eastern and Western wisdom together in one offline app: daily tarot, horoscopes, the Western natal chart, Zi Wei Dou Shu and BaZi, across five tabs — Today, Tarot, Astrology, Destiny and Me. The private Decision Journal is an optional add-on.</p>
-        <p class="updated"><time datetime="2026-08-29">2026-08-29</time></p>
+        <p class="updated"><time datetime="2026-09-08">2026-09-08</time></p>
       </section>
 
       <article class="policy">
-        <p class="notice" data-i18n="noCollection">Zodira has no account, ads, tracking, product analytics, developer-operated server or AI upload. We do not collect or receive your birth data, your readings or your journal entries.</p>
+        <p class="notice" data-i18n="noCollection">Zodira has no developer-operated account or backend. The app has no ads, tracking, usage analytics or AI uploads. We do not collect your birth details, readings or journal through the app. Apple services, paired-device transfers, sharing destinations and information you choose to email us are separate, as explained below.</p>
 
         <h2 data-i18n="name">Zodira</h2>
         <p>Zodira · iOS · watchOS</p>
         <p class="bundle-identifier"><strong>Bundle ID:</strong> <code>com.alice51849.Astrea</code></p>
 
-        <h2 data-i18n="privacy">Privacy</h2>
-        <p data-i18n="local">Private and offline; your birth data, readings, favorites and journal entries stay on this device.</p>
-        <p data-i18n="noCollection">Zodira has no account, ads, tracking, product analytics, developer-operated server or AI upload. We do not collect or receive your birth data, your readings or your journal entries.</p>
+        <h2 data-i18n="localHeading">On-device data</h2>
+        <p data-i18n="local">Birth details, readings, favorites and journal entries are processed and saved on your device. Calculations work offline; purchases, paired Apple Watch transfers, sharing and external links can use device connections or online services.</p>
+        <p data-i18n="localData">The birth date, time and place you enter, including coordinates from the built-in city list, are used for local chart calculations. Readings, favorites and journal entries are kept in the app's local storage, not on a developer server.</p>
 
         <h2>◇</h2>
         <p data-i18n="lens">Astrology and Tarot are symbolic material for reflection, not a prediction, a promise or professional advice.</p>
 
-        <h2>StoreKit · Apple</h2>
+        <h2 data-i18n="commerceHeading">Purchases handled by Apple</h2>
+        <p data-i18n="commerce">Apple's StoreKit handles product and price loading, purchases, purchase verification and restores. Zodira receives product information and verified access and transaction results; Apple may process your Apple Account, payment and transaction data under its privacy policy. Apple sets the retention rules for its commerce records. This is Apple-managed processing, not a Zodira account or payment backend.</p>
         <p><span data-i18n="purchase">One-time unlock, yours forever</span> · <span data-i18n="noSubscription">No subscription</span></p>
         <p data-i18n="restoreHelp">On the unlock screen, choose Restore Purchases while signed in to the Apple Account that made the purchase.</p>
 
-        <h2 data-i18n="delete">Delete all data</h2>
-        <p data-i18n="deletion">Delete a single reading or journal entry, or all local data, inside the app. Deleting Zodira removes its local container; Apple-managed backups remain governed by your device settings.</p>
+        <h2 data-i18n="watchHeading">Your paired Apple Watch</h2>
+        <p data-i18n="watchTransfer">WatchConnectivity sends a minimal journal snapshot to your paired Apple Watch, not to a developer server. It contains one record identifier, a normalized next action of up to 180 characters, an optional outcome and synchronization metadata. It excludes the birth profile and the full question, context, options, evidence, result and learning.</p>
+        <p id="watch-payload-label" data-i18n="watchFieldsHeading">Technical names of the transmitted fields</p>
+        <p id="watch-payload-fields" class="payload-fields" aria-labelledby="watch-payload-label"><code>schemaVersion</code> · <code>sourceID</code> · <code>revision</code> · <code>operation</code> · <code>recordID</code> · <code>nextAction</code> · <code>nextActionWasCondensed</code> · <code>outcome</code> · <code>recordUpdatedAt</code> · <code>issuedAt</code></p>
+        <p data-i18n="watchRetention">The Watch caches the latest validated update. New updates replace the previous snapshot. When the synchronized journal content is cleared, a clear message (tombstone) replaces that cached content after the Watch receives and accepts it. Clearing is not necessarily immediate: a disconnected Watch can retain an earlier copy.</p>
+
+        <h2 data-i18n="sharingHeading">Sharing you choose</h2>
+        <p data-i18n="sharing">Using ShareLink sends the selected journal record to the recipient, app or service you choose in the system share sheet. The shared text is the complete record in JSON, not the minimal Watch snapshot; if encoding fails, only the question is shared. Recipients and services retain their own copies under their rules. Local deletion does not recall those copies.</p>
+
+        <h2 data-i18n="delete">Storage and deletion</h2>
+        <p data-i18n="deletion">Use the app's deletion controls to remove saved readings or journal data. Deleting Zodira removes its local app container, but does not guarantee deletion of Keychain entries, Watch cache, Apple backups or copies shared with others. Their separate retention rules are described in this policy.</p>
+        <p data-i18n="keychain">To remember successful feature-trial use, a separate Keychain ledger stores operationID, feature and consumedAt, with a local mirror. It contains trial-use records, not journal contents, and is not sent to us. Keychain is outside the app container and can survive deleting or reinstalling the app; deleting journal data or the app does not guarantee erasing this ledger.</p>
+        <p data-i18n="backups">Apple and device settings determine whether app data is included in backups. Existing backups are not erased when local app data is deleted. Use Apple's backup controls to manage or delete these copies; their retention is governed by Apple and your settings, not by Zodira's developer.</p>
+
+        <h2 data-i18n="externalHeading">External links and websites</h2>
+        <p data-i18n="external">Opening support, privacy, EULA, review or other links connects to external websites. Their hosting services receive normal request data, such as IP addresses and browser information, under their own policies. This site uses GitHub Pages and loads app images from Apple. These web requests are separate from Zodira's local app calculations.</p>
+
         <h2 data-i18n="support">Support</h2>
-        <h2 data-i18n="support">Support</h2>
+        <p data-i18n="contact">If you email hourstag.app@gmail.com, we receive your email address, message and attachments you choose to send through your mail provider and Gmail. We use this information to handle your request and keep it only as needed for support or legal obligations. You can request deletion at that address; mail providers control their own copies.</p>
         <p><!--email_off--><a href="mailto:hourstag.app@gmail.com?subject=Zodira%20Privacy">hourstag.app@gmail.com</a><!--/email_off--></p>
       </article>
     </main>

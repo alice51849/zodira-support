@@ -7,6 +7,9 @@
   }
 
   const supported = Object.keys(locales);
+  if (supported.length !== 50) {
+    throw new Error("Zodira requires all 50 official locales");
+  }
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
   const locale = requested && Object.hasOwn(locales, requested) ? requested : "en-US";
@@ -20,6 +23,10 @@
     "support", "privacy", "local", "lens", "purchase", "noSubscription",
     "restore", "delete", "noCollection", "deletion", "restoreHelp",
     "titleSupport", "titlePrivacy",
+    "localHeading", "localData", "commerceHeading", "commerce",
+    "watchHeading", "watchTransfer", "watchFieldsHeading", "watchRetention",
+    "sharingHeading", "sharing", "externalHeading", "external",
+    "contact", "keychain", "backups",
   ];
   for (const key of required) {
     if (typeof copy[key] !== "string" || !copy[key].trim()) {

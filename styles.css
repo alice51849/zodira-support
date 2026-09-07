@@ -261,6 +261,12 @@ h3 {
 .policy strong { color: var(--gold-soft); }
 .policy li { margin: 7px 0; }
 .bundle-identifier code { color: var(--ink); }
+.payload-fields {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
 
 .support {
   max-width: 820px;
